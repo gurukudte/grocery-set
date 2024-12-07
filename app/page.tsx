@@ -1,19 +1,29 @@
 "use client"
 import Image from "next/image";
 
+/**
+ * Home page component that displays the main landing page for GrocerySet
+ * @returns The rendered home page with hero section, features, and email signup
+ */
 export default function Home() {
   return (
+    // Main container with responsive grid layout and gradient background
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-black">
+      {/* Main content section */}
       <main className="flex flex-col gap-8 row-start-2 items-center text-center max-w-3xl">
+        {/* Hero heading with gradient text */}
         <h1 className="text-4xl sm:text-6xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
           Grocery Delivery Made Easy
         </h1>
+        {/* Hero subheading */}
         <p className="text-xl text-gray-600 dark:text-gray-300">
           Fresh groceries from nearby supermarkets delivered right to your society or apartment
         </p>
 
         <div className="flex flex-col gap-6 items-center mt-8">
+          {/* Features grid - responsive 1 column on mobile, 3 columns on desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+            {/* Local Stores feature card */}
             <div className="flex justify-center items-center flex-col p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg">
               <Image
                 src="/icons/local-stores.png"
@@ -25,6 +35,7 @@ export default function Home() {
               <h3 className="font-semibold mb-2">Local Stores</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">Connect with nearby supermarkets and grocery stores</p>
             </div>
+            {/* Quick Delivery feature card */}
             <div className="flex justify-center items-center flex-col  p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg">
               <Image
                 src="/icons/fast-delivery.png"
@@ -36,6 +47,7 @@ export default function Home() {
               <h3 className="font-semibold mb-2">Quick Delivery</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">Swift delivery to your society or apartment</p>
             </div>
+            {/* Fresh Products feature card */}
             <div className="flex justify-center items-center flex-col  p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg">
               <Image
                 src="/icons/fresh-products.png"
@@ -49,6 +61,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Email signup section */}
           <div className="mt-8">
             <h2 className="text-2xl font-bold mb-4">Coming Soon!</h2>
             <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -65,6 +78,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Footer with copyright and links */}
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm text-gray-600 dark:text-gray-400">
         <p>© 2024 GrocerySet. All rights reserved.</p>
         <a href="#" className="hover:text-green-600">Privacy Policy</a>
